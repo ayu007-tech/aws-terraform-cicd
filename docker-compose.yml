@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+
+  tourism-app:
+
+    build: .
+
+    container_name: tourism-app
+
+    ports:
+      - "5000:5000"
+
+    restart: always

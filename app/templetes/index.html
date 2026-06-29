@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>LocoConnect Tourism</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<header>
+    <h1>LocoConnect</h1>
+    <p>Discover Amazing Tourist Destinations</p>
+</header>
+
+<section class="container">
+
+    {% for place in destinations %}
+    <div class="card">
+        <h2>{{ place.name }}</h2>
+        <p>{{ place.description }}</p>
+    </div>
+    {% endfor %}
+
+</section>
+
+<footer>
+    <p>Powered by AWS + Docker + Terraform + GitHub Actions</p>
+</footer>
+
+</body>
+</html>
